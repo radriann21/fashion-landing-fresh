@@ -1,12 +1,18 @@
 import { Head } from "fresh/runtime";
 import { define } from "@/utils.ts";
+import { Header } from "@/components/Header.tsx";
+import { Hero } from "@/components/Hero.tsx";
 
 export default define.page(function Home() {
   return (
-    <div class="px-4 py-8 mx-auto fresh-gradient min-h-screen">
+    <>
       <Head>
-        <title>Fresh counter</title>
+        <title>Fashion</title>
       </Head>
-    </div>
+      <div class="min-h-screen bg-main-bg max-w-full">
+        <Header />
+        <Hero />
+      </div>
+    </>
   );
 });

@@ -1,4 +1,5 @@
 import { define } from "@/utils.ts";
+import { Partial } from "fresh/runtime";
 
 export default define.page(function App({ Component }) {
   return (
@@ -6,10 +7,12 @@ export default define.page(function App({ Component }) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>fashion-landing-fresh</title>
+        <title>Fashion</title>
       </head>
-      <body>
-        <Component />
+      <body f-client-nav f-view-transition>
+        <Partial name="body">
+          <Component />
+        </Partial>
       </body>
     </html>
   );
