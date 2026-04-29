@@ -21,6 +21,7 @@
   "imports": {
     "@/": "./",
     "fresh": "jsr:@fresh/core@^2.3.0",
+    "motion": "npm:motion@^12.38.0",
     "preact": "npm:preact@^10.27.2",
     "@preact/signals": "npm:@preact/signals@^2.5.0",
     "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.0.8",

@@ -1,86 +1,41 @@
-import { Head } from "fresh/runtime";
-
 export function Hero() {
   const letters = Array.from("FASHION");
 
   return (
-    <>
-      <Head>
-        <style>
-          {`
-              @keyframes revealUp {
-              0% {
-                transform: translateY(100%);
-                opacity: 0;
-              }
-              100% {
-                transform: translateY(0);
-                opacity: 1;
-              }
-            }
-
-            .animate-letter {
-              animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards;
-              opacity: 0;
-              display: inline-block;
-            }
-
-            @keyframes revealFromRight {
-              0% {
-                transform: translateX(100px);
-                opacity: 0;
-              }
-              100% {
-                transform: translateX(0);
-                opacity: 1;
-              }
-            }
-
-            .animate-text-right {
-              animation: revealFromRight 1s cubic-bezier(0.16,1,0.3,1) forwards;
-              opacity: 0;
-              animation-delay: 1s;
-            }
-
-            @keyframes drawLine {
-              0% {
-                transform: scaleX(0);
-              }
-              100% {
-                transform: scaleX(1);
-              }
-            }
-
-            .animate-line {
-              transform-origin: left;
-              animation: drawLine 1s cubic-bezier(0.16,1,0.3,1) forwards;
-              transform: scaleX(0);
-              animation-delay: 0.8s;
-            }
-            `}
-        </style>
-      </Head>
-      <section className="w-full h-[450px] p-8 overflow-hidden">
-        <h1 className="text-[16vw] uppercase font-display font-bold">
-          {letters.map((letter, index) => (
-            <span
-              key={index}
-              className="animate-letter"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {letter}
-            </span>
-          ))}
-        </h1>
-        <div className="w-full h-1 bg-black animate-line"></div>
-        <div className="w-full flex items-end justify-end">
-          <p className="animate-text-right text-lg text-right w-1/2">
-            Created by people focused on comfor and class, this store and
-            signature collection celebrates our collective creativity and
-            passion for apparel.
+    <section className="w-full min-h-screen pt-32 px-8 overflow-hidden">
+      <h1 className="text-[18vw] leading-[0.85] uppercase font-display text-charcoal tracking-tighter">
+        {letters.map((letter, index) => (
+          <span
+            key={index}
+            className="inline-block opacity-0 animate-fadeUp"
+            style={{ animationDelay: `${index * 0.15}s` }}
+          >
+            {letter}
+          </span>
+        ))}
+        <span className="inline-block opacity-0 animate-fadeUp text-[4vw] align-top ml-2" style={{ animationDelay: "1s" }}>®</span>
+      </h1>
+      
+      <div className="w-full h-[2px] bg-charcoal mt-4 opacity-0 animate-fadeUp" style={{ animationDelay: "1.2s" }}></div>
+      
+      <div className="w-full grid grid-cols-3 gap-8 mt-6 text-sm uppercase tracking-wide text-gray-dark">
+        <div className="opacity-0 animate-fadeUp" style={{ animationDelay: "1.4s" }}>
+          <span className="font-semibold text-charcoal">FASHION</span>
+        </div>
+        <div className="opacity-0 animate-fadeUp max-w-xs" style={{ animationDelay: "1.6s" }}>
+          <p className="font-semibold text-charcoal mb-1">WHY</p>
+          <p className="text-gray-medium leading-relaxed">
+            Created by people focused on comfort and class, this store and 
+            signature collection celebrates our collective creativity and passion 
+            for apparel. Carefully designed.
           </p>
         </div>
-      </section>
-    </>
+        <div className="opacity-0 animate-fadeUp flex flex-col gap-2 items-end" style={{ animationDelay: "1.8s" }}>
+          <a href="#" className="link-underline hover:text-charcoal transition-colors">Visit Website</a>
+          <a href="#" className="link-underline hover:text-charcoal transition-colors">Shipping & Returns</a>
+          <span className="text-gray-light mt-2">© 2026</span>
+        </div>
+      </div>
+    </section>
   );
 }
