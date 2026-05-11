@@ -1,23 +1,47 @@
+import { MobileNav } from "@/islands/MobileNav.tsx";
+
+const navLinks = [
+  { label: "Shop", href: "/" },
+  { label: "Lookbook", href: "/lookbook" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
 export function Header() {
   return (
-    <header className="w-full px-10 py-8 flex items-center justify-between animate-topFadeIn opacity-0 fixed top-0 left-0 right-0 z-50 bg-main-bg/90 backdrop-blur-sm">
-      <a href="/" className="group flex items-center gap-1">
-        <span className="font-display text-2xl text-charcoal group-hover:scale-105 transition-transform duration-300">F</span>
+    <header className="w-full px-6 md:px-10 py-6 flex items-center justify-between animate-topFadeIn opacity-0 fixed top-0 left-0 right-0 z-50 bg-main-bg/95 backdrop-blur-md border-b border-charcoal/10">
+      <a href="/" className="group flex items-center gap-2" aria-label="MUSE — Home">
+        <span className="font-display text-2xl md:text-3xl text-charcoal group-hover:text-accent transition-colors duration-300 tracking-tight">
+          MUSE
+        </span>
+        <span className="hidden sm:block w-6 h-px bg-accent mt-1"></span>
       </a>
-      <nav>
-        <ul className="flex items-center gap-x-8 font-medium text-lg text-charcoal">
+
+      <nav className="hidden md:block" aria-label="Main navigation">
+        <ul className="flex items-center gap-x-10 font-medium text-xs text-charcoal uppercase tracking-[0.2em]">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="link-accent hover:text-accent transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
           <li>
-            <a href="/" className="link-underline hover:text-gray-medium transition-colors duration-300">
-              Shop
-            </a>
-          </li>
-          <li>
-            <a href="/cart" className="link-underline hover:text-gray-medium transition-colors duration-300">
-              <span className="cart-title-transition inline-block">Bag (0)</span>
+            <a
+              href="/cart"
+              className="link-accent hover:text-accent transition-colors duration-300"
+              aria-label="Shopping bag"
+            >
+              Bag (0)
             </a>
           </li>
         </ul>
       </nav>
+
+      <MobileNav />
     </header>
   );
 }

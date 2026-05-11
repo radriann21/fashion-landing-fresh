@@ -1,97 +1,90 @@
 import { ProductCard } from "@/islands/ProductCard.tsx";
 
 const leftProducts = [
-  { name: "Minimal Tee", price: 55.00, image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
-  { name: "Classic Crew", price: 48.00, image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
+  { name: "Minimal Tee", price: 55.00, material: "Pima Cotton", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
+  { name: "Classic Crew", price: 48.00, material: "Organic Cotton", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
 ];
 
 const rightProducts = [
-  { name: "Essential Hoodie", price: 95.00, image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
-  { name: "Daily Jacket", price: 125.00, image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
+  { name: "Essential Hoodie", price: 95.00, material: "French Terry Loop", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
+  { name: "Daily Jacket", price: 125.00, material: "Waxed Cotton", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
 ];
 
 export function ProductShowcase() {
   return (
-    <section className="w-full px-8 py-24">
-      {/* Title Section */}
-      <div className="text-center mb-16">
-        <p className="text-sm uppercase tracking-widest text-gray-medium mb-4">
-          Curated Selection
-        </p>
-        <h2 className="font-display text-[5vw] md:text-[3vw] text-charcoal">
-          Featured Collection
-        </h2>
-        <div className="w-24 h-[2px] bg-charcoal mx-auto mt-6"></div>
-      </div>
-
-      {/* Split Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-        {/* Left Column */}
-        <div className="space-y-8">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="vertical-text text-xs uppercase tracking-[0.3em] text-gray-medium h-24">
-              Essentials
-            </span>
-            <div className="h-px bg-charcoal/20 flex-1"></div>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-6 pl-8">
-            {leftProducts.map((product, index) => (
-              <ProductCard key={index} {...product} index={index} />
-            ))}
-          </div>
-
-          <p className="text-gray-medium text-sm pl-8 mt-6 max-w-sm">
-            Timeless basics designed for everyday comfort. 
-            Crafted from premium cotton for a perfect fit.
+    <section className="relative w-full px-6 md:px-10 py-24 md:py-32 overflow-hidden">
+      <span className="editorial-number absolute top-20 right-8 text-charcoal">03</span>
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="text-center mb-16 md:mb-20">
+          <p className="text-[10px] uppercase tracking-[0.35em] text-accent font-bold mb-4">
+            Curated Selection
           </p>
+          <h2 className="font-display text-[10vw] md:text-[5vw] text-charcoal tracking-[-0.04em] leading-[0.9]">
+            Featured Collection
+          </h2>
+          <div className="divider-accent mx-auto mt-6"></div>
         </div>
 
-        {/* Right Column */}
-        <div className="space-y-8 lg:pt-16">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-px bg-charcoal/20 flex-1"></div>
-            <span className="vertical-text text-xs uppercase tracking-[0.3em] text-gray-medium h-24 rotate-180">
-              Outerwear
-            </span>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-6 pr-8">
-            {rightProducts.map((product, index) => (
-              <ProductCard key={index} {...product} index={index + 2} />
-            ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="space-y-6 md:space-y-8">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">
+                Essentials
+              </span>
+              <div className="h-[2px] bg-charcoal/10 flex-1"></div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              {leftProducts.map((product, index) => (
+                <div key={index} className="opacity-0 animate-fadeUp" style={{ animationDelay: `${index * 0.15}s` }}>
+                  <ProductCard {...product} index={index} />
+                </div>
+              ))}
+            </div>
+
+            <p className="text-gray-medium text-sm mt-4 max-w-sm leading-relaxed border-l-2 border-accent/30 pl-4">
+              Timeless basics in premium Pima and organic cotton.
+              <br />
+              <span className="text-accent text-[10px] uppercase tracking-[0.2em] font-medium">4 colors available</span>
+            </p>
           </div>
 
-          <p className="text-gray-medium text-sm pr-8 mt-6 max-w-sm ml-auto text-right">
-            Elevated layers for transitional weather. 
-            Designed with attention to detail and functionality.
-          </p>
+          <div className="space-y-6 md:space-y-8 lg:pt-20">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-[2px] bg-charcoal/10 flex-1"></div>
+              <span className="text-[9px] uppercase tracking-[0.4em] text-accent font-bold">
+                Outerwear
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              {rightProducts.map((product, index) => (
+                <div key={index} className="opacity-0 animate-fadeUp" style={{ animationDelay: `${0.3 + index * 0.15}s` }}>
+                  <ProductCard {...product} index={index + 2} />
+                </div>
+              ))}
+            </div>
+
+            <p className="text-gray-medium text-sm mt-4 max-w-sm ml-auto text-right leading-relaxed border-r-2 border-accent/30 pr-4">
+              Elevated layers for transitional weather.
+              <br />
+              <span className="text-accent text-[10px] uppercase tracking-[0.2em] font-medium">Water-resistant finish</span>
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Bottom CTA */}
-      <div className="text-center mt-20">
-        <a 
-          href="/" 
-          className="inline-flex items-center gap-3 text-charcoal group"
-        >
-          <span className="text-sm uppercase tracking-widest group-hover:tracking-[0.3em] transition-all duration-500">
-            View All Products
-          </span>
-          <svg 
-            className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+        <div className="text-center mt-20 md:mt-28">
+          <a
+            href="/lookbook"
+            className="group inline-flex items-center gap-4 text-charcoal"
           >
-            <path 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              stroke-width={1.5} 
-              d="M17 8l4 4m0 0l-4 4m4-4H3" 
-            />
-          </svg>
-        </a>
+            <span className="text-xs uppercase tracking-[0.25em] font-bold group-hover:tracking-[0.4em] transition-all duration-500">
+              View All Products
+            </span>
+            <span className="inline-block w-8 h-px bg-accent group-hover:w-12 transition-all duration-500"></span>
+            <span className="text-accent group-hover:translate-x-2 transition-transform duration-300">→</span>
+          </a>
+        </div>
       </div>
     </section>
   );

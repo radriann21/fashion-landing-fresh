@@ -13,12 +13,12 @@ export default define.page(function Home() {
   return (
     <>
       <Head>
-        <title>Fashion® — Elegant Apparel</title>
-        <meta name="description" content="Thoughtfully designed apparel for the modern individual." />
+        <title>MUSE — Thoughtfully Designed Apparel</title>
+        <meta name="description" content="Editorial fashion for the modern individual. Thoughtfully designed apparel crafted with intention." />
       </Head>
       <div class="min-h-screen bg-main-bg max-w-full">
         <Header />
-        <main>
+        <main id="main-content">
           <Hero />
           <MainProducts />
           <ProductShowcase />

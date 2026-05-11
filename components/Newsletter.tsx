@@ -1,66 +1,54 @@
-import { Head } from "fresh/runtime";
-
 export function Newsletter() {
   return (
-    <>
-      <Head>
-        <style>{`
-          @keyframes expandWidth {
-            0% { width: 0%; }
-            100% { width: 100%; }
-          }
-          @keyframes glowPulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(245, 237, 230, 0.1); }
-            50% { box-shadow: 0 0 40px rgba(245, 237, 230, 0.2); }
-          }
-          .animate-expand {
-            animation: expandWidth 2s cubic-bezier(0.16,1,0.3,1) forwards;
-          }
-          .animate-glow {
-            animation: glowPulse 4s ease-in-out infinite;
-          }
-        `}</style>
-      </Head>
-      <section className="w-full px-8 py-24 bg-charcoal text-cream relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-1/4 w-px h-full bg-cream/20"></div>
-          <div className="absolute top-0 right-1/4 w-px h-full bg-cream/20"></div>
-        </div>
-        
-        <div className="max-w-xl mx-auto text-center relative">
-          <p className="text-xs uppercase tracking-[0.3em] text-gray-light mb-4 animate-fadeUp opacity-0">
-            Newsletter
-          </p>
-          
-          <h2 className="font-display text-4xl mb-6 animate-revealBlur opacity-0">
-            Stay Updated
-          </h2>
-          
-          <div className="w-24 h-px bg-cream/30 mx-auto mb-8 animate-expand"></div>
-          
-          <p className="text-gray-light mb-10 text-sm animate-fadeUp opacity-0 stagger-2">
-            Subscribe for exclusive drops and early access to new collections.
-          </p>
-          
-          <form className="flex flex-col sm:flex-row gap-4 animate-fadeUp opacity-0 stagger-3">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="flex-1 px-5 py-4 bg-transparent border border-cream/30 text-cream placeholder-gray-light focus:outline-none focus:border-cream/60 transition-all duration-500 focus:animate-glow"
-            />
-            <button 
-              type="submit"
-              className="px-8 py-4 bg-cream text-charcoal font-medium hover:bg-white transition-all duration-300 hover:shadow-lg"
-            >
-              Subscribe
-            </button>
-          </form>
-          
-          <p className="mt-8 text-xs text-gray-medium animate-fadeUp opacity-0 stagger-5">
-            By subscribing, you agree to our Privacy Policy.
-          </p>
-        </div>
-      </section>
-    </>
+    <section className="relative w-full px-6 md:px-10 py-32 md:py-40 bg-charcoal text-cream overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-px h-full bg-cream/20"></div>
+        <div className="absolute top-0 right-1/4 w-px h-full bg-cream/20"></div>
+        <div className="absolute top-1/3 left-0 w-full h-px bg-cream/10"></div>
+        <div className="absolute bottom-1/3 left-0 w-full h-px bg-cream/10"></div>
+      </div>
+
+      <span className="editorial-number absolute top-10 left-8 text-cream/5">06</span>
+      <span className="editorial-number absolute bottom-10 right-8 text-cream/5">07</span>
+
+      <div className="max-w-xl mx-auto text-center relative z-10">
+        <p className="text-[9px] uppercase tracking-[0.45em] text-accent-light font-bold mb-6 animate-fadeUp opacity-0">
+          Newsletter
+        </p>
+
+        <h2 className="font-display text-4xl md:text-5xl mb-6 animate-revealBlur opacity-0 leading-[0.9] tracking-tight">
+          Stay Updated
+        </h2>
+
+        <div className="divider-accent mx-auto mb-8"></div>
+
+        <p className="text-cream/50 mb-10 text-sm animate-fadeUp opacity-0 stagger-2 max-w-sm mx-auto leading-relaxed">
+          Subscribe for exclusive drops, early access to new collections, and studio updates.
+        </p>
+
+        <form className="flex flex-col sm:flex-row gap-4 animate-fadeUp opacity-0 stagger-3 max-w-lg mx-auto">
+          <label for="newsletter-email" class="sr-only">
+            Email address
+          </label>
+          <input
+            id="newsletter-email"
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-6 py-5 bg-transparent border border-cream/20 text-cream placeholder-cream/30 focus:outline-none focus:border-accent-light transition-all duration-300 text-sm uppercase tracking-wider"
+            autocomplete="email"
+          />
+          <button
+            type="submit"
+            class="px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light hover:text-charcoal transition-all duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+
+        <p className="mt-8 text-[10px] text-cream/30 animate-fadeUp opacity-0 stagger-5 uppercase tracking-wider">
+          No spam. Unsubscribe anytime.
+        </p>
+      </div>
+    </section>
   );
 }
