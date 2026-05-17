@@ -72,21 +72,21 @@ export default define.page(function Lookbook() {
             <div class="max-w-6xl mx-auto space-y-32">
               {collections.map((collection, index) => (
                 <div key={collection.name} class="group cursor-pointer">
-                  <div class="flex items-start justify-between mb-10">
-                    <div class="flex items-start gap-6">
+                  <div class="flex flex-col sm:flex-row items-start justify-between mb-10 gap-4 sm:gap-0">
+                    <div class="flex items-start gap-4 sm:gap-6">
                       <span class="text-[9px] font-bold text-accent mt-2 tracking-[0.3em] uppercase">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                       <div>
-                        <span class="text-6xl md:text-7xl font-display text-charcoal group-hover:text-accent transition-colors duration-500 leading-none">
+                        <span class="text-4xl sm:text-6xl md:text-7xl font-display text-charcoal group-hover:text-accent group-focus-within:text-accent transition-colors duration-500 leading-none">
                           {collection.name}
                         </span>
-                        <p class="text-gray-dark text-sm max-w-md mt-4 leading-relaxed border-l-2 border-accent/30 pl-4 group-hover:border-accent transition-colors duration-500">
+                        <p class="text-gray-dark text-sm max-w-md mt-4 leading-relaxed border-l-2 border-accent/30 pl-4 group-hover:border-accent group-focus-within:border-accent transition-colors duration-500">
                           {collection.note}
                         </p>
                       </div>
                     </div>
-                    <div class="text-right flex-shrink-0">
+                    <div class="text-right flex-shrink-0 self-start sm:self-auto">
                       <p class="text-[10px] uppercase tracking-[0.3em] text-accent font-bold">
                         {collection.label}
                       </p>
@@ -109,7 +109,7 @@ export default define.page(function Lookbook() {
                               <img
                                 src={images[i]}
                                 alt={`${collection.name} — ${String(i + 1).padStart(2, '0')}`}
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-focus-within:scale-105"
                                 loading="lazy"
                               />
                             )
@@ -125,10 +125,10 @@ export default define.page(function Lookbook() {
                     })}
                   </div>
 
-                  <div class="mt-6 flex items-center gap-6">
-                    <div class="h-[2px] bg-accent/30 w-16 group-hover:w-24 transition-all duration-500"></div>
+                    <div class="mt-6 flex items-center gap-6">
+                    <div class="h-[2px] bg-accent/30 w-16 group-hover:w-24 group-focus-within:w-24 transition-all duration-500"></div>
                     <div class="h-[2px] bg-charcoal/10 flex-1"></div>
-                    <span class="text-[10px] uppercase tracking-[0.35em] text-gray-light group-hover:text-accent font-bold transition-colors duration-300 flex-shrink-0">
+                    <span class="text-[10px] uppercase tracking-[0.35em] text-gray-light group-hover:text-accent group-focus-within:text-accent font-bold transition-colors duration-300 flex-shrink-0">
                       View Collection
                     </span>
                     <div class="h-[2px] bg-charcoal/10 flex-1"></div>
@@ -136,7 +136,7 @@ export default define.page(function Lookbook() {
 
                   <div class="flex gap-4 mt-6 flex-wrap">
                     {collection.fabrics.map((fabric) => (
-                      <span key={fabric} class="text-[9px] uppercase tracking-[0.2em] text-gray-light border border-charcoal/10 px-3 py-1.5 group-hover:border-accent/30 transition-colors duration-300">
+                      <span key={fabric} class="text-[9px] uppercase tracking-[0.2em] text-gray-light border border-charcoal/10 px-3 py-1.5 group-hover:border-accent/30 group-focus-within:border-accent/30 transition-colors duration-300">
                         {fabric}
                       </span>
                     ))}

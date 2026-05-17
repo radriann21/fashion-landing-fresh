@@ -36,7 +36,7 @@ export function CartDrawer() {
           >
             <div className="flex items-center justify-between px-6 py-5 border-b border-charcoal/10">
               <h2 className="text-xs uppercase tracking-[0.25em] text-charcoal font-bold">
-                Bag ({cartItems.value.length})
+                BAG ({cartItems.value.length})
               </h2>
               <button
                 type="button"

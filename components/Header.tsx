@@ -1,4 +1,5 @@
 import { MobileNav } from "@/islands/MobileNav.tsx";
+import { MobileNavPanel } from "@/islands/MobileNavPanel.tsx";
 import { CartTrigger } from "@/islands/CartTrigger.tsx";
 import { CartDrawer } from "@/islands/CartDrawer.tsx";
 import { AuthModal } from "@/islands/AuthModal.tsx";
@@ -41,6 +42,7 @@ export function Header() {
 
         <MobileNav />
       </header>
+      <MobileNavPanel />
       <CartDrawer />
       <AuthModal />
     </>
