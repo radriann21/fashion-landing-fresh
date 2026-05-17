@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { addToCart } from "@/lib/cart.ts";
 
 interface ProductCardProps {
   name?: string;
@@ -51,6 +52,7 @@ export function ProductCard({
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                addToCart({ id: image, name, price, image });
               }}
               aria-label={`Add ${name} to cart`}
             >

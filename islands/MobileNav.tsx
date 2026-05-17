@@ -1,4 +1,5 @@
 import { useSignal } from "@preact/signals";
+import { cartCount, cartOpen } from "@/lib/cart.ts";
 
 const navLinks = [
   { label: "Shop", href: "/" },
@@ -42,9 +43,13 @@ export function MobileNav() {
               ))}
             </ul>
             <div class="mt-16 pt-10 border-t border-cream/10">
-              <a href="/cart" class="text-cream/40 hover:text-cream text-xs uppercase tracking-[0.3em] transition-colors duration-300" onClick={() => open.value = false}>
-                Bag (0)
-              </a>
+              <button
+                type="button"
+                class="text-cream/40 hover:text-cream text-xs uppercase tracking-[0.3em] transition-colors duration-300 cursor-pointer"
+                onClick={() => { open.value = false; cartOpen.value = true; }}
+              >
+                Bag ({cartCount.value})
+              </button>
             </div>
           </nav>
         </div>
