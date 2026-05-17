@@ -1,6 +1,6 @@
 export function Newsletter() {
   return (
-    <section className="relative w-full px-6 md:px-10 py-32 md:py-40 bg-charcoal text-cream overflow-hidden">
+    <section className="relative w-full px-6 md:px-10 py-32 md:py-40 bg-accent text-white overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-px h-full bg-cream/20"></div>
         <div className="absolute top-0 right-1/4 w-px h-full bg-cream/20"></div>
@@ -39,7 +39,7 @@ export function Newsletter() {
           />
           <button
             type="submit"
-            class="px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light hover:text-charcoal transition-all duration-300"
+            class="px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light hover:text-white transition-all duration-300"
           >
             Subscribe
           </button>

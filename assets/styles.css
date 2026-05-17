@@ -57,16 +57,16 @@
 }
 
 @theme {
-  --color-main-bg: #F2EAE4;
-  --color-cream: #F8F2EC;
-  --color-cream-dark: #D9CCC0;
-  --color-charcoal: #1C1816;
-  --color-gray-dark: #34302C;
-  --color-gray-medium: #544D47;
-  --color-gray-light: #7A7266;
-  --color-accent: #7A2E3A;
-  --color-accent-light: #C4919E;
-  --color-accent-surface: #F0E0E4;
+  --color-main-bg: #221F1C;
+  --color-cream: #F2EDE4;
+  --color-cream-dark: #D4C8B6;
+  --color-charcoal: #F5EFE5;
+  --color-gray-dark: #EBE4D8;
+  --color-gray-medium: #D6CCBA;
+  --color-gray-light: #BEB09E;
+  --color-accent: #7A8B6E;
+  --color-accent-light: #B3C0A8;
+  --color-accent-surface: #EBEFE4;
   --color-white: #FFFFFF;
 
   --font-sans: "Inter", sans-serif;
@@ -178,10 +178,10 @@
 
   @keyframes glowPulse {
     0%, 100% {
-      box-shadow: 0 0 8px rgba(122, 46, 58, 0.2);
+      box-shadow: 0 0 8px rgba(122, 139, 110, 0.2);
     }
     50% {
-      box-shadow: 0 0 24px rgba(122, 46, 58, 0.4);
+      box-shadow: 0 0 24px rgba(122, 139, 110, 0.4);
     }
   }
 }
@@ -302,7 +302,7 @@
   .hover-card-overlay .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(28, 24, 22, 0.5);
+    background: rgba(245, 239, 229, 0.5);
     backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
@@ -331,11 +331,11 @@
   }
 
   .text-shadow {
-    text-shadow: 2px 2px 0px rgba(28, 24, 22, 0.1);
+    text-shadow: 2px 2px 0px rgba(34, 31, 28, 0.1);
   }
 
   .text-shadow-heavy {
-    text-shadow: 3px 3px 0px rgba(28, 24, 22, 0.15);
+    text-shadow: 3px 3px 0px rgba(34, 31, 28, 0.15);
   }
 
   .text-outline {
@@ -401,8 +401,8 @@
     left: 0;
     z-index: 100;
     padding: 8px 16px;
-    background: var(--color-charcoal);
-    color: var(--color-cream);
+    background: var(--color-accent);
+    color: var(--color-white);
     font-size: 14px;
     transition: top 0.2s;
   }
@@ -451,7 +451,7 @@
 
   .hover-card-overlay .overlay {
     opacity: 1 !important;
-    background: rgba(28, 24, 22, 0.2) !important;
+    background: rgba(245, 239, 229, 0.2) !important;
   }
   .hover-card-overlay .overlay button {
     transform: translateY(0) !important;

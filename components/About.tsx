@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <section className="relative w-full px-6 md:px-10 py-24 md:py-32 overflow-hidden bg-charcoal text-cream">
+    <section className="relative w-full px-6 md:px-10 py-24 md:py-32 overflow-hidden bg-accent text-white">
       <span className="editorial-number absolute top-10 left-8 text-cream/10">04</span>
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <p className="text-[10px] uppercase tracking-[0.35em] text-accent-light font-bold mb-6">
@@ -22,7 +22,7 @@ export function About() {
         <div className="mt-12 flex items-center justify-center gap-6">
           <a
             href="/about"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light hover:text-charcoal transition-all duration-300"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light hover:text-white transition-all duration-300"
           >
             <span>Read Our Story</span>
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>

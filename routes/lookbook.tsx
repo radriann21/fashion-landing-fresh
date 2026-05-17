@@ -10,6 +10,12 @@ const collections = [
     pieces: 12,
     note: "Wool, shearling, and structured silhouettes. A study in warmth and restraint.",
     fabrics: ["Italian Wool", "Japanese Denim", "Shearling"],
+    images: [
+      "/images/collection-1-1.webp",
+      "/images/collection-1-2.webp",
+      "/images/collection-1-3.webp",
+      "/images/collection-1-4.webp",
+    ],
   },
   { 
     name: "SS25", 
@@ -17,6 +23,12 @@ const collections = [
     pieces: 15,
     note: "Lightweight linens and relaxed tailoring. Architecture meets air.",
     fabrics: ["Irish Linen", "Pima Cotton", "Tencel"],
+    images: [
+      "/images/collection-2-1.webp",
+      "/images/collection-2-2.webp",
+      "/images/collection-2-3.webp",
+      "/images/collection-2-4.webp",
+    ],
   },
   { 
     name: "AW24", 
@@ -24,6 +36,12 @@ const collections = [
     pieces: 10,
     note: "The debut collection. Raw edges, heavy textures, and a manifesto in cloth.",
     fabrics: ["Harris Tweed", "Organic Cotton", "Recycled Wool"],
+    images: [
+      "/images/collection-3-1.webp",
+      "/images/collection-3-2.webp",
+      "/images/collection-3-3.webp",
+      "/images/collection-3-4.webp",
+    ],
   },
 ];
 
@@ -79,18 +97,32 @@ export default define.page(function Lookbook() {
                   </div>
 
                   <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                    {Array.from({ length: 4 }, (_, i) => (
-                      <div
-                        key={i}
-                        class="aspect-[3/4] bg-cream-dark overflow-hidden"
-                      >
-                        <div class="w-full h-full bg-cream-dark group-hover:bg-cream transition-colors duration-700 flex items-center justify-center relative">
-                          <span class="text-[10px] uppercase tracking-[0.2em] text-gray-light/50">
-                            {collection.name} — {String(i + 1).padStart(2, '0')}
-                          </span>
+                    {Array.from({ length: 4 }, (_, i) => {
+                      const images = (collection as { images?: string[] }).images;
+                      return (
+                        <div
+                          key={i}
+                          class="aspect-[3/4] overflow-hidden"
+                        >
+                          {images
+                            ? (
+                              <img
+                                src={images[i]}
+                                alt={`${collection.name} — ${String(i + 1).padStart(2, '0')}`}
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy"
+                              />
+                            )
+                            : (
+                              <div class="w-full h-full bg-cream-dark group-hover:bg-cream transition-colors duration-700 flex items-center justify-center relative">
+                                <span class="text-[10px] uppercase tracking-[0.2em] text-gray-light/50">
+                                  {collection.name} — {String(i + 1).padStart(2, '0')}
+                                </span>
+                              </div>
+                            )}
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
 
                   <div class="mt-6 flex items-center gap-6">
@@ -114,26 +146,26 @@ export default define.page(function Lookbook() {
             </div>
           </section>
 
-          <section class="relative w-full px-8 py-32 bg-charcoal text-cream text-center overflow-hidden">
-            <span class="editorial-number absolute top-10 right-12 text-cream/5">05</span>
-            <span class="editorial-number absolute bottom-10 left-8 text-cream/5">06</span>
+          <section class="relative w-full px-8 py-32 bg-accent text-white text-center overflow-hidden">
+            <span class="editorial-number absolute top-10 right-12 text-white/10">05</span>
+            <span class="editorial-number absolute bottom-10 left-8 text-white/10">06</span>
             <div class="max-w-xl mx-auto relative z-10">
               <p class="text-[9px] uppercase tracking-[0.4em] text-accent-light font-bold mb-6">
                 Coming Soon
               </p>
-              <h2 class="font-display text-5xl md:text-6xl text-cream leading-[0.9] tracking-tight">
+              <h2 class="font-display text-5xl md:text-6xl text-white leading-[0.9] tracking-tight">
                 SS26 Preview
               </h2>
-              <div class="w-16 h-[3px] bg-accent-light/30 mx-auto mt-8 mb-8"></div>
-              <p class="text-cream/50 text-sm leading-relaxed max-w-md mx-auto">
+              <div class="w-16 h-[3px] bg-white/30 mx-auto mt-8 mb-8"></div>
+              <p class="text-white/70 text-sm leading-relaxed max-w-md mx-auto">
                 Our upcoming spring collection. Light fabrics, relaxed silhouettes, 
                 a new palette. Minimalism with warmth.
               </p>
-              <div class="mt-10 flex items-center justify-center gap-6 text-[10px] uppercase tracking-[0.3em] text-cream/30">
+              <div class="mt-10 flex items-center justify-center gap-6 text-[10px] uppercase tracking-[0.3em] text-white/40">
                 <span>100% Linen</span>
-                <span className="w-px h-4 bg-cream/20"></span>
+                <span className="w-px h-4 bg-white/20"></span>
                 <span>6 Colors</span>
-                <span className="w-px h-4 bg-cream/20"></span>
+                <span className="w-px h-4 bg-white/20"></span>
                 <span>March 2026</span>
               </div>
             </div>

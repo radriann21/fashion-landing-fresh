@@ -5,29 +5,25 @@ const products = [
     name: "Time Off Tee",
     price: 45.0,
     material: "Japanese Cotton",
-    image:
-      "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif",
+    image: "/images/home-1.webp",
   },
   {
     name: "Essential Hoodie",
     price: 89.0,
     material: "French Terry",
-    image:
-      "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif",
+    image: "/images/home-2.webp",
   },
   {
     name: "Classic Tote",
     price: 65.0,
     material: "Waxed Canvas",
-    image:
-      "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif",
+    image: "/images/home-3.webp",
   },
   {
     name: "Minimal Cap",
     price: 35.0,
     material: "Italian Wool",
-    image:
-      "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif",
+    image: "/images/home-4.webp",
   },
 ];
 

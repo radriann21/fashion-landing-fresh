@@ -26,8 +26,8 @@ export function MobileNav() {
 
       {open.value && (
         <div class="fixed inset-0 top-0 left-0 w-full h-full z-40 md:hidden">
-          <div class="absolute inset-0 bg-charcoal/60 backdrop-blur-md" onClick={() => open.value = false} />
-          <nav class="relative z-50 bg-charcoal w-80 h-full ml-auto px-12 py-32 shadow-2xl border-l-2 border-accent/20">
+          <div class="absolute inset-0 bg-black/60 backdrop-blur-md" onClick={() => open.value = false} />
+          <nav class="relative z-50 bg-black/90 w-80 h-full ml-auto px-12 py-32 shadow-2xl border-l-2 border-accent/20">
             <ul class="space-y-10">
               {navLinks.map((link) => (
                 <li key={link.href}>

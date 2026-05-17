@@ -1,13 +1,13 @@
 import { ProductCard } from "@/islands/ProductCard.tsx";
 
 const leftProducts = [
-  { name: "Minimal Tee", price: 55.00, material: "Pima Cotton", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
-  { name: "Classic Crew", price: 48.00, material: "Organic Cotton", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
+  { name: "Minimal Tee", price: 55.00, material: "Pima Cotton", image: "/images/home-5.webp" },
+  { name: "Classic Crew", price: 48.00, material: "Organic Cotton", image: "/images/home-6.webp" },
 ];
 
 const rightProducts = [
-  { name: "Essential Hoodie", price: 95.00, material: "French Terry Loop", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
-  { name: "Daily Jacket", price: 125.00, material: "Waxed Cotton", image: "/images/t-shirt-time-off-outfit-2_6ed63e49-09af-4ab5-9994-7f1fef44c587.avif" },
+  { name: "Essential Hoodie", price: 95.00, material: "French Terry Loop", image: "/images/home-7.webp" },
+  { name: "Daily Jacket", price: 125.00, material: "Waxed Cotton", image: "/images/home-8.webp" },
 ];
 
 export function ProductShowcase() {

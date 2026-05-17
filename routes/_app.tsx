@@ -7,7 +7,7 @@ export default define.page(function App({ Component }) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#F2EAE4" />
+        <meta name="theme-color" content="#221F1C" />
       </head>
         <body f-client-nav>
         <a href="#main-content" className="skip-link">

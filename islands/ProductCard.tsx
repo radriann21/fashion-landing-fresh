@@ -36,7 +36,7 @@ export function ProductCard({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: delay || index * 0.12, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="hover-card-overlay image-hover-zoom rounded-sm overflow-hidden bg-cream" tabIndex={0}>
+      <div className="hover-card-overlay image-hover-zoom rounded-sm overflow-hidden" tabIndex={0}>
         <img
           src={image}
           alt={name}
@@ -47,7 +47,7 @@ export function ProductCard({
           <div className="overlay" aria-hidden={!showAddToCart}>
             <button
               type="button"
-              className="px-6 py-3 min-h-11 bg-charcoal text-cream font-medium text-xs uppercase tracking-[0.2em] hover:bg-accent transition-colors duration-300 cursor-pointer"
+              className="px-6 py-3 min-h-11 bg-accent text-white font-medium text-xs uppercase tracking-[0.2em] hover:bg-accent-light transition-colors duration-300 cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();

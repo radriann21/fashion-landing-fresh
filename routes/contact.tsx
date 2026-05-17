@@ -78,7 +78,7 @@ export default define.page(function Contact() {
                   </div>
                   <button
                     type="submit"
-                    class="group w-full px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-charcoal transition-all duration-300 inline-flex items-center justify-center gap-3"
+                    class="group w-full px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light transition-all duration-300 inline-flex items-center justify-center gap-3"
                   >
                     <span>Send Message</span>
                     <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>

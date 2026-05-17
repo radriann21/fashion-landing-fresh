@@ -7,7 +7,7 @@ export function Hero() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
           <div className="md:col-span-3">
-            <h1 className="text-[24vw] md:text-[16vw] leading-[0.75] uppercase font-display text-charcoal tracking-tighter">
+            <h1 className="text-[20vw] md:text-[12vw] leading-[0.75] uppercase font-display text-charcoal tracking-tighter">
               {letters.map((letter, index) => (
                 <span
                   key={index}
@@ -55,17 +55,17 @@ export function Hero() {
         <div className="mt-14 flex flex-col sm:flex-row gap-5 opacity-0 animate-fadeUp" style={{ animationDelay: "1.6s" }}>
           <a
             href="/lookbook"
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] hover:bg-charcoal transition-all duration-300 text-center font-medium animate-glowPulse"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] hover:bg-accent-light transition-all duration-300 text-center font-medium animate-glowPulse"
           >
             <span>Explore Collection</span>
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
           <a
             href="/about"
-            className="inline-flex items-center gap-2 px-10 py-5 border-2 border-charcoal/20 text-charcoal text-xs uppercase tracking-[0.25em] hover:border-charcoal transition-all duration-300 text-center font-medium"
+            className="inline-flex items-center gap-2 px-10 py-5 border-2 border-cream/30 text-cream text-xs uppercase tracking-[0.25em] hover:border-cream transition-all duration-300 text-center font-medium"
           >
             <span>Our Story</span>
-            <span className="inline-block text-charcoal/40">↗</span>
+            <span className="inline-block text-cream/50">↗</span>
           </a>
         </div>
       </div>

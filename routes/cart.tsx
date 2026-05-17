@@ -22,7 +22,7 @@ export default define.page(function Cart() {
               <p className="text-gray-medium text-sm uppercase tracking-wider">Your cart is currently empty.</p>
               <a
                 href="/"
-                className="group inline-flex items-center gap-3 mt-8 px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-charcoal transition-all duration-300"
+                className="group inline-flex items-center gap-3 mt-8 px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light transition-all duration-300"
               >
                 <span>Continue Shopping</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>

@@ -86,16 +86,16 @@ export default define.page(function About() {
             </div>
           </section>
 
-          <section class="relative w-full px-8 py-28 bg-charcoal text-cream overflow-hidden">
-            <span class="editorial-number absolute bottom-10 right-12 text-cream/5">02</span>
-            <span class="editorial-number absolute top-10 left-8 text-cream/5">03</span>
+          <section class="relative w-full px-8 py-28 bg-accent text-white overflow-hidden">
+            <span class="editorial-number absolute bottom-10 right-12 text-white/10">02</span>
+            <span class="editorial-number absolute top-10 left-8 text-white/10">03</span>
             <div class="max-w-4xl mx-auto text-center relative z-10">
               <p class="text-[9px] uppercase tracking-[0.4em] text-accent-light font-bold mb-8">
                 Our Values
               </p>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
                 {values.map((v, i) => (
-                  <div key={v.title} class="text-left border-t-2 border-cream/10 pt-8">
+                  <div key={v.title} class="text-left border-t-2 border-white/20 pt-8">
                     <span class="text-3xl font-display text-cream/10 block mb-3">0{i + 1}</span>
                     <h3 class="font-display text-xl text-cream mb-3">{v.title}</h3>
                     <p class="text-cream/60 text-sm leading-relaxed">{v.desc}</p>
@@ -128,9 +128,9 @@ export default define.page(function About() {
             </div>
           </section>
 
-          <section class="w-full px-8 py-24 bg-charcoal text-cream">
+          <section class="w-full px-8 py-24 bg-accent text-white">
             <div class="max-w-4xl mx-auto text-center">
-              <p class="text-[9px] uppercase tracking-[0.4em] text-accent-light mb-8 font-bold">The Team</p>
+              <p class="text-[9px] uppercase tracking-[0.4em] text-white/80 mb-8 font-bold">The Team</p>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {team.map((member) => (
                   <div key={member.name} class="group">
@@ -159,7 +159,7 @@ export default define.page(function About() {
               </p>
               <a
                 href="/contact"
-                class="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-cream text-xs uppercase tracking-[0.25em] font-bold hover:bg-charcoal transition-all duration-300"
+                class="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-white text-xs uppercase tracking-[0.25em] font-bold hover:bg-accent-light hover:text-white transition-all duration-300"
               >
                 <span>Book an Appointment</span>
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
