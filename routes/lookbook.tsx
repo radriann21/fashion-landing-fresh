@@ -2,6 +2,7 @@ import { Head } from "fresh/runtime";
 import { define } from "@/utils.ts";
 import { Header } from "@/components/Header.tsx";
 import { Footer } from "@/components/Footer.tsx";
+import { Image } from "@/components/Image.tsx";
 
 const collections = [
   { 
@@ -51,6 +52,8 @@ export default define.page(function Lookbook() {
       <Head>
         <title>Lookbook — MUSE</title>
         <meta name="description" content="Browse the MUSE collection lookbook. Editorial fashion photography and curated pieces." />
+        <link rel="preload" as="image" href="/images/collection-1-1.webp" imagesrcset="/images/opt/collection-1-1-400.webp 400w, /images/opt/collection-1-1-800.webp 800w, /images/opt/collection-1-1-1200.webp 1200w" imagesizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw" fetchpriority="high" />
+        <link rel="preload" as="image" href="/images/collection-1-2.webp" imagesrcset="/images/opt/collection-1-2-400.webp 400w, /images/opt/collection-1-2-800.webp 800w, /images/opt/collection-1-2-1200.webp 1200w" imagesizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw" fetchpriority="high" />
       </Head>
       <div class="min-h-screen bg-main-bg max-w-full">
         <Header />
@@ -106,11 +109,11 @@ export default define.page(function Lookbook() {
                         >
                           {images
                             ? (
-                              <img
+                              <Image
                                 src={images[i]}
                                 alt={`${collection.name} — ${String(i + 1).padStart(2, '0')}`}
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-focus-within:scale-105"
-                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-focus-within:scale-105"
+                                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
                               />
                             )
                             : (

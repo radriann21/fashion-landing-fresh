@@ -419,6 +419,21 @@
   }
 }
 
+@keyframes imageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.image-fade-in {
+  opacity: 0;
+  animation: imageFadeIn 0.5s ease 0.1s forwards;
+}
+
+.image-fade-in.loaded {
+  opacity: 1;
+  animation: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -426,7 +441,11 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  }
+
+  .image-fade-in {
+    opacity: 0;
+    animation: imageFadeIn 0.4s ease 0.05s forwards !important;
   }
 
   .animate-topFadeIn,

@@ -15,6 +15,8 @@ export default define.page(function Home() {
       <Head>
         <title>MUSE — Thoughtfully Designed Apparel</title>
         <meta name="description" content="Editorial fashion for the modern individual. Thoughtfully designed apparel crafted with intention." />
+        <link rel="preload" as="image" href="/images/home-1.webp" imagesrcset="/images/opt/home-1-400.webp 400w, /images/opt/home-1-800.webp 800w, /images/opt/home-1-1200.webp 1200w" imagesizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 300px" fetchpriority="high" />
+        <link rel="preload" as="image" href="/images/home-2.webp" imagesrcset="/images/opt/home-2-400.webp 400w, /images/opt/home-2-800.webp 800w, /images/opt/home-2-1200.webp 1200w" imagesizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 300px" fetchpriority="high" />
       </Head>
       <div class="min-h-screen bg-main-bg max-w-full">
         <Header />

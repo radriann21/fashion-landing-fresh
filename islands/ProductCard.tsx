@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { addToCart } from "@/lib/cart.ts";
+import { Image } from "@/components/Image.tsx";
 
 interface ProductCardProps {
   name?: string;
@@ -38,11 +39,11 @@ export function ProductCard({
       transition={{ duration: 0.7, delay: delay || index * 0.12, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="hover-card-overlay image-hover-zoom rounded-sm overflow-hidden" tabIndex={0}>
-        <img
+        <Image
           src={image}
           alt={name}
           className="w-full aspect-3/4 object-cover transition-transform duration-700 group-hover:scale-105"
-          loading="lazy"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 300px"
         />
         {showAddToCart && (
           <div className="overlay" aria-hidden={!showAddToCart}>

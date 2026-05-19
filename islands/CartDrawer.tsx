@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { cartItems, cartTotal, cartOpen, authModalOpen, removeFromCart } from "@/lib/cart.ts";
+import { Image } from "@/components/Image.tsx";
 
 export function CartDrawer() {
   const formatter = new Intl.NumberFormat("en-US", {
@@ -67,10 +68,11 @@ export function CartDrawer() {
                   {cartItems.value.map((item) => (
                     <li key={item.id} className="flex gap-4 group">
                       <div className="w-20 h-24 shrink-0 rounded-sm overflow-hidden bg-charcoal/5">
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.name}
                           className="w-full h-full object-cover"
+                          sizes="80px"
                         />
                       </div>
                       <div className="flex-1 min-w-0">
